@@ -1,0 +1,3227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PayBuyTrust</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    /* Hide scrollbar */
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <body
+    class="min-h-screen bg-gradient-to-br from-sky-100 via-emerald-50 to-white"
+  >
+    <!-- NAVIGATION BAR -->
+    <nav
+      class="sticky top-0 z-50 w-full border-b border-white/20 bg-white/20 backdrop-blur-xl"
+    >
+      <div class="w-full px-4 sm:px-6 md:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <img
+            src="/images/logo.png"
+            alt="Logo"
+            class="h-10 w-auto object-contain sm:h-12 md:h-[52.63px] md:w-[81px]"
+          />
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center">
+            <a
+              href="#"
+              class="bg-[#2A52BE] text-white text-sm font-medium px-5 py-1.5 rounded-full no-underline shadow-sm"
+            >
+              Home
+            </a>
+
+            <div class="w-px h-[18px] bg-[#1a2e3b]/20 mx-4"></div>
+
+            <a
+              href="#"
+              class="text-sm font-medium text-[#1a2e3b] no-underline hover:text-blue-600 transition-colors"
+            >
+              About Us
+            </a>
+          </div>
+
+          <!-- Desktop CTA -->
+          <button
+            class="hidden md:block text-sm font-medium text-[#2A52BE] border border-[#2A52BE] rounded-full px-5 py-1.5 bg-white/10 hover:bg-[#2A52BE] hover:text-white transition-all"
+          >
+            Download App
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="menu-btn"
+            class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg border border-[#1a2e3b]/20 bg-white/10 backdrop-blur-md"
+            aria-label="Toggle menu"
+          >
+            <span class="block w-5 h-0.5 bg-[#1a2e3b] mb-1"></span>
+            <span class="block w-5 h-0.5 bg-[#1a2e3b] mb-1"></span>
+            <span class="block w-5 h-0.5 bg-[#1a2e3b]"></span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+          <div class="flex flex-col gap-3 pt-2">
+            <a
+              href="#"
+              class="bg-blue-600/90 text-white text-sm font-medium px-5 py-2 rounded-full no-underline text-center"
+            >
+              Home
+            </a>
+
+            <a
+              href="#"
+              class="text-sm font-medium text-[#1a2e3b] no-underline hover:text-blue-600 transition-colors text-center"
+            >
+              About Us
+            </a>
+
+            <button
+              class="w-full text-sm font-medium text-[#1a2e3b] border border-[#1a2e3b]/30 rounded-full px-5 py-2 bg-white/10 hover:bg-[#1a2e3b] hover:text-white transition-all"
+            >
+              Download App
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section
+      class="relative overflow-hidden min-h-[640px] flex items-stretch"
+      style="
+        background: linear-gradient(
+          135deg,
+          #dff0f7 0%,
+          #eaf6f0 50%,
+          #f5faf7 100%
+        );
+      "
+    >
+      <!-- Grid background -->
+      <div
+        class="absolute inset-0 pointer-events-none z-0"
+        style="
+          background-image:
+            linear-gradient(rgba(0, 0, 0, 0.045) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 0, 0, 0.045) 1px, transparent 1px);
+          background-size: 60px 60px;
+        "
+      ></div>
+
+      <div
+        class="relative z-10 w-full max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12 px-5 py-14 sm:px-8 lg:px-16"
+      >
+        <!-- LEFT -->
+        <div
+          class="flex flex-col items-center lg:items-start text-center lg:text-left gap-5"
+        >
+          <!-- Badge -->
+          <div
+            class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-[13px] font-medium text-[#1a2e3b] border border-[#1a2e3b]/30 bg-white/35 backdrop-blur-md shadow-[0_4px_18px_rgba(15,23,42,0.06)]"
+          >
+            <svg class="w-[15px] h-[15px]" viewBox="0 0 15 15" fill="none">
+              <path
+                d="M7.5 1.5L2 3.5V8C2 11.2 4.5 14.1 7.5 14.5C10.5 14.1 13 11.2 13 8V3.5L7.5 1.5Z"
+                stroke="#22c55e"
+                stroke-width="1.3"
+                fill="none"
+              />
+              <path
+                d="M5 7.5l2 2 3-3"
+                stroke="#22c55e"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Secured Transaction
+          </div>
+
+          <!-- Headline -->
+          <h1
+            class="text-[clamp(34px,5vw,49px)] font-[500] text-[#0d1b2a] leading-[1] tracking-[0.8px] max-w-[700px]"
+          >
+            Transact With Confidence
+          </h1>
+
+          <!-- Subtext -->
+          <p
+            class="text-[20px] sm:text-[18px] text-[#2B353F] leading-relaxed max-w-[560px] tracking-[0.03em]"
+          >
+            We safely hold payments until both parties confirm the deal is
+            completed.
+          </p>
+
+          <!-- CTA buttons -->
+          <div
+            class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2"
+          >
+            <a
+              href="#"
+              class="inline-flex items-center gap-2.5 rounded-full bg-[#2A52BE] px-6 py-3 text-[#F7F7F8] text-[16px] font-medium transition-all hover:bg-[#1a2e3b] hover:-translate-y-px shadow-[0_10px_24px_rgba(37,99,235,0.22)]"
+            >
+              <svg class="w-[18px] h-[18px]" viewBox="0 0 18 18" fill="white">
+                <path d="M3 2.5l9.5 6.5L3 15.5V2.5z" />
+              </svg>
+              <div class="w-px h-[18px] bg-white/40 tracking-[0.5px]"></div>
+              Google Play
+            </a>
+
+            <a
+              href="#"
+              class="inline-flex items-center gap-2.5 rounded-full bg-[#2A52BE] px-6 py-3 text-[#F7F7F8] text-[16px] font-medium transition-all hover:bg-[#1a2e3b] hover:-translate-y-px shadow-[0_10px_24px_rgba(37,99,235,0.22)]"
+            >
+              <svg class="w-[18px] h-[18px]" viewBox="0 0 18 18" fill="white">
+                <path
+                  d="M13.2 9.6c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.6-1.3-.1-2.5.7-3.1.7-.7 0-1.7-.7-2.8-.7-1.4 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.5 2.2 2.6 2.1 1-.1 1.4-.7 2.7-.7 1.2 0 1.6.7 2.7.6 1.1 0 1.8-1 2.5-2 .8-1.1 1.1-2.2 1.1-2.3-.1 0-2.1-.8-2.1-3.6zM10.5 3.3c.6-.7 1-1.7.9-2.7-.9.1-1.9.6-2.5 1.3-.6.6-1 1.6-.9 2.5.9.1 1.9-.4 2.5-1.1z"
+                />
+              </svg>
+              <div class="w-px h-[18px] bg-white/40 tracking-[2px]"></div>
+              App Store
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div
+          class="relative flex items-center justify-center min-h-[560px] w-full"
+        >
+          <!-- Phone frame -->
+          <div
+            class="relative z-10 w-[250px] sm:w-[270px] lg:w-[285px] xl:w-[300px] rounded-[36px] overflow-hidden"
+          >
+            <img
+              src="/images/phone.png"
+              alt="PayBuy App"
+              class="w-full block"
+            />
+          </div>
+
+          <!-- Amount card (left) -->
+          <div
+            class="absolute top-[38%] right-[calc(50%+180px)] sm:right-[calc(50%+195px)] lg:right-[calc(50%+205px)] rounded-[24px] p-4 sm:p-5 z-20 min-w-[170px] bg-white/45 backdrop-blur-xl border border-white/40 shadow-[0_10px_30px_rgba(15,23,42,0.10),inset_0_1px_0_rgba(255,255,255,0.55)]"
+          >
+            <div
+              class="absolute -top-2.5 -right-2.5 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center shadow-[0_6px_16px_rgba(34,197,94,0.25)]"
+            >
+              <svg class="w-3 h-3" viewBox="0 0 14 14" fill="none">
+                <path
+                  d="M3 7l3 3 5-5"
+                  stroke="white"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <p class="text-[11px] text-gray-500 font-medium mb-1">Amount</p>
+            <p
+              class="text-xl sm:text-2xl font-extrabold text-[#0d1b2a] tracking-tight"
+            >
+              $500,000.00
+            </p>
+          </div>
+
+          <!-- Payment Protected (top-right, icon below text) -->
+          <div
+            class="absolute top-6 left-[calc(50%+180px)] sm:left-[calc(50%+195px)] lg:left-[calc(50%+205px)] flex flex-col items-center gap-3 z-20"
+          >
+            <span class="text-xs font-medium text-[#4a5568] whitespace-nowrap">
+              Payment Protected
+            </span>
+
+            <div
+              class="w-10 h-10 rounded-2xl bg-green-500/90 backdrop-blur-md border border-white/30 flex items-center justify-center shadow-[0_10px_30px_rgba(34,197,94,0.25)]"
+            >
+              <svg class="w-[18px] h-[18px]" viewBox="0 0 18 18" fill="none">
+                <path
+                  d="M9 1.5L3 4V9C3 12.6 5.7 15.9 9 16.5C12.3 15.9 15 12.6 15 9V4L9 1.5Z"
+                  fill="white"
+                  opacity="0.95"
+                />
+                <path
+                  d="M6 9l2 2 4-4"
+                  stroke="#22c55e"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Merchant card (right) -->
+          <div
+            class="absolute bottom-[18%] left-[calc(50%+180px)] sm:left-[calc(50%+195px)] lg:left-[calc(50%+205px)] rounded-[24px] p-4 z-20 min-w-[170px] bg-white/45 backdrop-blur-xl border border-white/40 shadow-[0_10px_30px_rgba(15,23,42,0.10),inset_0_1px_0_rgba(255,255,255,0.55)]"
+          >
+            <div
+              class="w-9 h-9 bg-blue-600/90 rounded-xl flex items-center justify-center mb-3 shadow-[0_8px_20px_rgba(37,99,235,0.22)]"
+            >
+              <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none">
+                <rect
+                  x="2"
+                  y="4"
+                  width="12"
+                  height="9"
+                  rx="2"
+                  stroke="white"
+                  stroke-width="1.3"
+                />
+                <path
+                  d="M5 4V3a3 3 0 016 0v1"
+                  stroke="white"
+                  stroke-width="1.3"
+                />
+                <circle cx="8" cy="9" r="1.2" fill="white" />
+              </svg>
+            </div>
+
+            <p class="text-[10px] text-gray-500">To</p>
+            <p class="text-[13px] font-bold text-[#0d1b2a]">Online Store</p>
+            <p class="text-[10px] text-gray-500 mb-1.5">Merchant Account</p>
+            <p class="text-[10px] text-gray-500">
+              Status:
+              <span class="text-green-500 font-semibold">Payment Received</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HERO SECTION 3 -->
+    <!-- ══ PROBLEM SECTION ══ -->
+    <section class="bg-white px-6 md:px-10 xl:px-20 py-16 xl:py-18">
+      <div
+        class="mx-auto max-w-[1560px] grid grid-cols-1 lg:grid-cols-[1.08fr_0.92fr] items-center gap-10 xl:gap-20"
+      >
+        <!-- Left image -->
+        <div class="relative">
+          <div class="overflow-hidden rounded-[16px]">
+            <img
+              src="/images/worried.jpeg"
+              alt="Worried woman using a laptop"
+              class="block w-full h-[260px] sm:h-[340px] md:h-[420px] lg:h-[460px] xl:h-[540px] object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Right content -->
+        <div class="flex flex-col items-start">
+          <!-- Badge -->
+          <div
+            class="inline-flex items-center gap-2 rounded-full bg-[#f8eaea] px-5 py-3 text-[14px] font-semibold text-[#ef4444]"
+          >
+            <svg
+              class="h-5 w-5 shrink-0"
+              viewBox="0 0 20 20"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M10 3.2L3.4 15h13.2L10 3.2Z"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10 7.4v3.8M10 13.4v.4"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span>The Problem</span>
+          </div>
+
+          <!-- Heading -->
+          <h2
+            class="mt-8 text-[34px] leading-[.08] font-medium tracking-[0.01em] text-black sm:text-[42px] lg:text-[39px]"
+          >
+            <span class="inline-block pb-1">
+              Tired of Sending Money First?
+            </span>
+          </h2>
+
+          <!-- Subtext -->
+          <p
+            class="mt-6 text-[20px] leading-[1.6] font-normal text-[#4b5563] sm:text-[22px]"
+          >
+            Online transactions today come with real risk:
+          </p>
+
+          <!-- Bullet list -->
+          <ul class="mt-7 space-y-4">
+            <li
+              class="flex items-center gap-4 text-[20px] leading-[1.5] text-[#4b5563]"
+            >
+              <span
+                class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#ff4d4f]"
+              >
+                <svg
+                  class="h-3.5 w-3.5"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 3l6 6M9 3 3 9"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <span>Fake vendors and scam listings</span>
+            </li>
+
+            <li
+              class="flex items-center gap-4 text-[20px] leading-[1.5] text-[#4b5563]"
+            >
+              <span
+                class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#ff4d4f]"
+              >
+                <svg
+                  class="h-3.5 w-3.5"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 3l6 6M9 3 3 9"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <span>Wrong or damaged items</span>
+            </li>
+
+            <li
+              class="flex items-center gap-4 text-[20px] leading-[1.5] text-[#4b5563]"
+            >
+              <span
+                class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#ff4d4f]"
+              >
+                <svg
+                  class="h-3.5 w-3.5"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 3l6 6M9 3 3 9"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <span>Freelancers disappearing after payment</span>
+            </li>
+
+            <li
+              class="flex items-center gap-4 text-[20px] leading-[1.5] text-[#4b5563]"
+            >
+              <span
+                class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#ff4d4f]"
+              >
+                <svg
+                  class="h-3.5 w-3.5"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 3l6 6M9 3 3 9"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <span>Clients refusing to pay after work</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ SOLUTION SECTION ══ -->
+    <section
+      class="relative overflow-hidden bg-white px-5 sm:px-8 lg:px-16 xl:px-24"
+    >
+      <!-- Lock watermark -->
+      <div
+        class="pointer-events-none absolute left-[40%] top-[86%] -translate-x-1/2 -translate-y-1/2 z-0 w-[260px] h-[260px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] lg:w-[720px] lg:h-[420px] xl:w-[620px] xl:h-[820px] opacity-[1.12]"
+      >
+        <img
+          src="/images/lock.png"
+          alt=""
+          class="w-full h-full object-contain"
+        />
+      </div>
+
+      <div
+        class="relative z-10 mx-auto grid max-w-[1720px] grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(520px,840px)] lg:gap-12 xl:gap-16"
+      >
+        <!-- Left content -->
+        <div class="relative z-10 max-w-[760px]">
+          <div
+            class="inline-flex items-center gap-2 rounded-full bg-[#edf8ef] px-4 py-2 text-[14px] font-semibold text-[#2fb455]"
+          >
+            <svg class="h-4 w-4" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M7 1L2 3.5V7C2 10.1 4.2 13 7 13.5C9.8 13 12 10.1 12 7V3.5L7 1Z"
+                stroke="#2fb455"
+                stroke-width="1.3"
+                fill="none"
+              />
+              <path
+                d="M4.5 7l2 2 3-3"
+                stroke="#2fb455"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            The Solution
+          </div>
+
+          <h2
+            class="mt-8 max-w-[780px] text-[39px] leading-[.08] font-medium tracking-[0.01em] text-black sm:text-[42px] lg:text-[39px] text-[#000408]"
+          >
+            There's a Safer Way to Transact.
+          </h2>
+
+          <p
+            class="mt-8 max-w-[760px] text-[19px] leading-[1.55] text-[#2B353F] sm:text-[21px] lg:text-[22px]"
+          >
+            Funds stay secure until both parties confirm, ensuring fair and
+            structured protection.
+          </p>
+
+          <ul class="mt-10 space-y-5">
+            <li
+              class="flex items-center gap-4 text-[18px] font-medium text-[#374151] sm:text-[20px]"
+            >
+              <span
+                class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#34c759]"
+              >
+                <svg class="h-3.5 w-3.5" viewBox="0 0 12 12" fill="none">
+                  <path
+                    d="M2.5 6l2.2 2.2L9.5 3.5"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              Funds secured before delivery
+            </li>
+
+            <li
+              class="flex items-center gap-4 text-[18px] font-medium text-[#374151] sm:text-[20px]"
+            >
+              <span
+                class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#34c759]"
+              >
+                <svg class="h-3.5 w-3.5" viewBox="0 0 12 12" fill="none">
+                  <path
+                    d="M2.5 6l2.2 2.2L9.5 3.5"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              Payment released only after confirmation
+            </li>
+
+            <li
+              class="flex items-center gap-4 text-[18px] font-medium text-[#374151] sm:text-[20px]"
+            >
+              <span
+                class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#34c759]"
+              >
+                <svg class="h-3.5 w-3.5" viewBox="0 0 12 12" fill="none">
+                  <path
+                    d="M2.5 6l2.2 2.2L9.5 3.5"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              Fair dispute mediation if needed
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right image -->
+        <div class="relative z-10">
+          <div
+            class="mx-auto w-full max-w-[840px] overflow-hidden rounded-[22px]"
+          >
+            <img
+              src="/images/lady.png"
+              alt="Business handshake"
+              class="block h-[260px] w-full object-cover sm:h-[340px] md:h-[420px] lg:h-[460px] xl:h-[500px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW PAYBUYTRUST WORKS -->
+    <section class="overflow-x-hidden py-20 lg:py-24 bg-[#FAFAFA]">
+      <div class="mx-auto max-w-[1600px] px-6 lg:px-10">
+        <!-- Header -->
+        <div class="mx-auto mb-20 max-w-[780px] text-center">
+          <span
+            class="inline-flex items-center rounded-full bg-[#eef2ff] px-5 py-2 text-[14px] font-medium text-[#4163d8]"
+          >
+            Simple Process
+          </span>
+
+          <h2
+            class="mt-6 text-[39px] leading-[1] font-medium tracking-[0.01em] text-black sm:text-[42px] lg:text-[39px]"
+          >
+            How PayBuyTrust Works
+          </h2>
+
+          <p
+            class="mx-auto mt-4 font-[400] max-w-[280px] text-[16px] leading-[1.6] text-[#6b7280] sm:text-[14px]"
+          >
+            A simple 4-step process that protects both buyers and sellers
+          </p>
+        </div>
+
+        <!-- Steps -->
+        <div
+          class="grid grid-cols-1 gap-y-16 md:grid-cols-2 md:gap-x-12 xl:grid-cols-4 xl:gap-x-10"
+        >
+          <!-- STEP 1 -->
+          <article class="relative">
+            <!-- visual area -->
+            <div class="relative h-[350px]">
+              <!-- number -->
+              <div class="absolute left-0 top-[38px] z-30">
+                <div
+                  class="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#2A52BE] text-[20px] font-bold text-white"
+                >
+                  1
+                </div>
+              </div>
+
+              <!-- phone -->
+              <div
+                class="absolute left-1/2 top-[54px] z-10 h-[386px] w-[232px] -translate-x-1/2 rounded-[34px] border-[7px] border-black bg-[#f7f7f8]"
+              >
+                <!-- top left -->
+                <div class="absolute left-6 top-5 space-y-[3px]">
+                  <span
+                    class="block h-[2px] w-[14px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                  <span
+                    class="block h-[2px] w-[14px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                  <span
+                    class="block h-[2px] w-[14px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                </div>
+
+                <!-- top right -->
+                <div class="absolute right-6 top-6 flex gap-[3px]">
+                  <span
+                    class="h-[4px] w-[4px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                  <span
+                    class="h-[4px] w-[4px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                  <span
+                    class="h-[4px] w-[4px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                </div>
+
+                <!-- center icon -->
+                <div
+                  class="absolute left-1/2 top-[104px] flex h-[48px] w-[48px] -translate-x-1/2 items-center justify-center rounded-[12px] bg-[#edf1ff] mb-4"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-7 w-7 text-[#2f5bd3]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 3v18m4-14H10a3 3 0 100 6h4a3 3 0 110 6H8"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- pill -->
+              <div
+                class="absolute left-1/2 top-[228px] z-20 flex w-[292px] -translate-x-1/2 items-center rounded-full border border-[#dbe2f5] bg-[#f3f5fb] px-6 py-1 shadow-[0_2px_8px_rgba(0,0,0,0.04)] mt-4"
+              >
+                <span
+                  class="mr-3 flex h-[36px] w-[36px] items-center justify-center rounded-full bg-white text-[18px]"
+                >
+                  🎉
+                </span>
+                <span
+                  class="text-[17px] font-medium tracking-[-0.01em] text-[#374151]"
+                >
+                  Payment Secured
+                </span>
+              </div>
+            </div>
+
+            <!-- content area -->
+            <div class="relative z-30 -mt-[1px] bg-[#FAFAFA] pt-2">
+              <h3
+                class="text-[20px] font-semibold leading-[1.18] tracking-[-0.01em] text-[#0f172a]"
+              >
+                Buyer and seller agrees
+              </h3>
+              <p
+                class="mt-3 max-w-[305px] text-[18px] leading-[1.5] text-[#6b7280] font-normal tracking-[0.03em]"
+              >
+                Buyer initiates transaction and sends payment securely
+              </p>
+            </div>
+          </article>
+
+          <!-- STEP 2 -->
+          <article class="relative">
+            <!-- visual area -->
+            <div class="relative h-[350px]">
+              <!-- number -->
+              <div class="absolute left-0 top-[38px] z-30">
+                <div
+                  class="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#2A52BE] text-[24px] font-medium text-white"
+                >
+                  2
+                </div>
+              </div>
+
+              <!-- phone -->
+              <div
+                class="absolute left-1/2 top-[54px] z-10 h-[386px] w-[232px] -translate-x-1/2 rounded-[34px] border-[7px] border-black bg-[#f7f7f8]"
+              >
+                <div class="absolute left-6 top-5 space-y-[3px]">
+                  <span
+                    class="block h-[2px] w-[14px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                  <span
+                    class="block h-[2px] w-[14px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                  <span
+                    class="block h-[2px] w-[14px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                </div>
+
+                <div class="absolute right-6 top-6 flex gap-[3px]">
+                  <span
+                    class="h-[4px] w-[4px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                  <span
+                    class="h-[4px] w-[4px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                  <span
+                    class="h-[4px] w-[4px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                </div>
+
+                <div
+                  class="absolute left-1/2 top-[104px] flex h-[48px] w-[48px] -translate-x-1/2 items-center justify-center rounded-[12px] bg-[#e9f7eb]"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-7 w-7 text-[#36c45f]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9.5 12.5l2 2 3-4"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- pill -->
+              <div
+                class="absolute left-1/2 top-[203px] z-20 flex w-[278px] -translate-x-1/2 items-center rounded-full border border-[#dbe2f5] bg-[#f3f5fb] px-6 py-1 shadow-[0_2px_8px_rgba(0,0,0,0.04)] mt-10"
+              >
+                <span
+                  class="mr-3 flex h-[36px] w-[36px] items-center justify-center rounded-full bg-[#34c759]"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="3"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="text-[17px] font-medium tracking-[-0.01em] text-[#374151]"
+                >
+                  Secured funds
+                </span>
+              </div>
+            </div>
+
+            <!-- content area -->
+            <div class="relative z-30 -mt-[1px] bg-[#FAFAFA] pt-2">
+              <h3
+                class="text-[20px] font-semibold leading-[1.18] tracking-[-0.01em] text-[#0f172a]"
+              >
+                Payment is secured
+              </h3>
+              <p
+                class="mt-3 max-w-[320px] text-[18px] leading-[1.5] text-[#6b7280] tracking-[0.03em]"
+              >
+                Buyer pays into escrow; seller notified when funds are secured.
+              </p>
+            </div>
+          </article>
+
+          <!-- STEP 3 -->
+          <article class="relative">
+            <!-- visual area -->
+            <div class="relative h-[350px]">
+              <!-- number -->
+              <div class="absolute left-0 top-[38px] z-30">
+                <div
+                  class="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#2A52BE] text-[24px] font-medium text-white"
+                >
+                  3
+                </div>
+              </div>
+
+              <!-- phone -->
+              <div
+                class="absolute left-1/2 top-[54px] z-10 h-[386px] w-[232px] -translate-x-1/2 rounded-[34px] border-[7px] border-black bg-[#f7f7f8]"
+              >
+                <div class="absolute left-6 top-5 space-y-[3px]">
+                  <span
+                    class="block h-[2px] w-[14px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                  <span
+                    class="block h-[2px] w-[14px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                  <span
+                    class="block h-[2px] w-[14px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                </div>
+
+                <div class="absolute right-6 top-6 flex gap-[3px]">
+                  <span
+                    class="h-[4px] w-[4px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                  <span
+                    class="h-[4px] w-[4px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                  <span
+                    class="h-[4px] w-[4px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                </div>
+
+                <div
+                  class="absolute left-1/2 top-[104px] flex h-[48px] w-[48px] -translate-x-1/2 items-center justify-center rounded-[12px] bg-[#edf1ff]"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-7 w-7 text-[#2e3166]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- pill -->
+              <div
+                class="absolute left-1/2 top-[198px] z-20 flex w-[336px] -translate-x-1/2 items-start rounded-full border border-[#dbe2f5] bg-[#f3f5fb] px-6 py-1 shadow-[0_2px_8px_rgba(0,0,0,0.04)] mt-11"
+              >
+                <span
+                  class="mr-3 mt-[2px] flex h-[30px] w-[30px] items-center justify-center rounded-full bg-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-[#2e3166]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10"
+                    />
+                  </svg>
+                </span>
+
+                <div class="min-w-0 flex-1">
+                  <p
+                    class="truncate text-[17px] font-medium tracking-[-0.01em] text-[#374151]"
+                  >
+                    Delivering your products...
+                  </p>
+                  <div class="mt-1 h-[6px] w-full rounded-full bg-[#dbe4ff]">
+                    <div
+                      class="h-[6px] w-[82%] rounded-full bg-[#9db3ff]"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- content area -->
+            <div class="relative z-30 -mt-[1px] bg-[#FAFAFA] pt-2">
+              <h3
+                class="text-[20px] font-semibold leading-[1.18] tracking-[-0.01em] text-[#0f172a]"
+              >
+                Seller Delivers
+              </h3>
+              <p
+                class="mt-3 max-w-[295px] text-[18px] leading-[1.5] text-[#6b7280] tracking-[0.03em]"
+              >
+                Seller ships product or completes the agreed service
+              </p>
+            </div>
+          </article>
+
+          <!-- STEP 4 -->
+          <article class="relative">
+            <!-- visual area -->
+            <div class="relative h-[350px]">
+              <!-- number -->
+              <div class="absolute left-0 top-[38px] z-30">
+                <div
+                  class="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#2A52BE] text-[24px] font-medium text-white"
+                >
+                  4
+                </div>
+              </div>
+
+              <!-- phone -->
+              <div
+                class="absolute left-1/2 top-[50px] z-10 h-[386px] w-[232px] -translate-x-1/2 rounded-[34px] border-[7px] border-black bg-[#f7f7f8]"
+              >
+                <div class="absolute left-6 top-5 space-y-[3px]">
+                  <span
+                    class="block h-[2px] w-[14px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                  <span
+                    class="block h-[2px] w-[14px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                  <span
+                    class="block h-[2px] w-[14px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                </div>
+
+                <div class="absolute right-6 top-6 flex gap-[3px]">
+                  <span
+                    class="h-[4px] w-[4px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                  <span
+                    class="h-[4px] w-[4px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                  <span
+                    class="h-[4px] w-[4px] rounded-full bg-[#8d8d8d]"
+                  ></span>
+                </div>
+
+                <div
+                  class="absolute left-1/2 top-[104px] flex h-[48px] w-[48px] -translate-x-1/2 items-center justify-center rounded-[12px] bg-[#e9f7eb]"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-7 w-7 text-[#36c45f]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2.4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12l2 2 4-4"
+                    />
+                    <circle cx="12" cy="12" r="8"></circle>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- pill -->
+              <div
+                class="absolute left-1/2 top-[201px] z-20 flex w-[338px] -translate-x-1/2 items-center rounded-full border border-[#dbe2f5] bg-[#f3f5fb] px-5 py-1 shadow-[0_2px_8px_rgba(0,0,0,0.04)] mt-10"
+              >
+                <span
+                  class="mr-3 flex h-[34px] w-[34px] items-center justify-center rounded-full bg-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 animate-spin text-[#111827]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      class="opacity-20"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      stroke-width="4"
+                    ></circle>
+                    <path
+                      class="opacity-100"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                    ></path>
+                  </svg>
+                </span>
+                <span
+                  class="truncate text-[17px] font-medium tracking-[-0.01em] text-[#374151]"
+                >
+                  Buyer confirming order...
+                </span>
+              </div>
+            </div>
+
+            <!-- content area -->
+            <div class="relative z-30 -mt-[1px] bg-[#FAFAFA] pt-2">
+              <h3
+                class="text-[20px] font-semibold leading-[1.18] tracking-[-0.01em] text-[#0f172a]"
+              >
+                Buyer Confirms → Seller Gets Paid
+              </h3>
+              <p
+                class="mt-3 max-w-[330px] text-[18px] leading-[1.5] text-[#6b7280] tracking-[0.03em]"
+              >
+                Funds are released after confirmation; disputes are handled if
+                issues arise.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRACK EVERY TRANSACTION IN REAL-TIME -->
+
+    <section class="bg-[#081026] py-24 sm:py-28 lg:py-32">
+      <div class="mx-auto max-w-6xl px-6 lg:px-8">
+        <!-- Heading -->
+        <div class="mx-auto max-w-4xl text-center">
+          <h2
+            class="mt-6 text-[39px] leading-[1] font-medium tracking-[0.01em] text-white sm:text-[42px] lg:text-[39px]"
+          >
+            Track Every Step in Real-Time
+          </h2>
+          <p
+            class="mx-auto mt-5 max-w-3xl text-[16px] text-white/70 sm:text-[14px] tracking-[0.03em]"
+          >
+            Monitor your transaction status with our intuitive dashboard
+          </p>
+        </div>
+
+        <!-- Stacked status cards -->
+        <div class="relative mx-auto mt-16 h-[250px] w-full max-w-[1040px]">
+          <!-- Card 3 -->
+          <div
+            class="absolute left-1/2 top-[160px] z-10 w-full max-w-[820px] -translate-x-1/2 rounded-[16px] border border-[#E2E8F0] bg-[#f3f4f6] px-5 py-7 shadow-[0_10px_24px_rgba(0,0,0,0.08)]"
+          >
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex min-w-0 items-center gap-5">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-8 w-8 text-[#85888f]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="1.9"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10"
+                    />
+                  </svg>
+                </span>
+                <p
+                  class="truncate text-[18px] font-normal tracking-[-0.02em] text-[#0F172B] tracking-[0.05em]"
+                >
+                  Awaiting Delivery
+                </p>
+              </div>
+
+              <span
+                class="shrink-0 text-[16px] font-normal text-[#8a8f98] tracking-[0.03em]"
+              >
+                Pending
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="absolute left-1/2 top-[85px] z-20 w-full max-w-[890px] -translate-x-1/2 rounded-[16px] border border-[#BEDBFF] bg-[#eef3fb] px-5 py-7 shadow-[0_12px_28px_rgba(0,0,0,0.10)]"
+          >
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex min-w-0 items-center gap-5">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-8 w-8 text-[#2563ff]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="1.9"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"
+                    />
+                  </svg>
+                </span>
+                <p
+                  class="truncate text-[18px] font-normal tracking-[-0.02em] text-[#0F172B] tracking-[0.05em]"
+                >
+                  Funds in Escrow
+                </p>
+              </div>
+
+              <span
+                class="shrink-0 text-[16px] font-normal text-[#2A52BE] tracking-[0.03em]"
+              >
+                Active
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 1 -->
+          <div
+            class="absolute left-1/2 top-0 z-30 w-full max-w-[970px] -translate-x-1/2 rounded-[16px] border border-[#A4F4CF] bg-[#eaf8ef] px-5 py-7 shadow-[0_16px_34px_rgba(0,0,0,0.12)]"
+          >
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex min-w-0 items-center gap-5">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-8 w-8 text-[#00a169]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12l2 2 4-4"
+                    />
+                    <circle cx="12" cy="12" r="8"></circle>
+                  </svg>
+                </span>
+                <p
+                  class="truncate text-[18px] font-normal tracking-[-0.02em] text-[#111827] tracking-[0.05em]"
+                >
+                  Payment Received
+                </p>
+              </div>
+
+              <span
+                class="shrink-0 text-[16px] font-normal text-[#00a169] tracking-[0.03em]"
+              >
+                Completed
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUY AND SELL HIGH-VALUE ITEMS SAFELY -->
+
+    <section class="relative overflow-hidden bg-[#f7f7f8] py-24 lg:py-28">
+      <!-- Grid background -->
+      <div
+        class="pointer-events-none absolute inset-0 z-0"
+        style="
+          background-image:
+            linear-gradient(rgba(15, 23, 42, 0.055) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(15, 23, 42, 0.055) 1px, transparent 1px);
+          background-size: 78px 78px;
+          background-position: center center;
+        "
+      ></div>
+
+      <div class="relative z-10 mx-auto px-6 lg:px-16">
+        <!-- Top heading -->
+        <div class="mx-auto max-w-[820px] text-center">
+          <div
+            class="inline-flex items-center gap-2 rounded-full bg-[#eef1ff] px-4 py-2 text-[14px] font-medium text-[#4463d8]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.9"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"
+              />
+            </svg>
+            <span>Secure Marketplace</span>
+          </div>
+
+          <h2
+            class="mt-6 text-[39px] leading-[1] font-medium tracking-[0.01em] text-[#0F172B] sm:text-[42px] lg:text-[39px]"
+          >
+            Buy &amp; Sell High-Value Items Safely
+          </h2>
+
+          <p
+            class="mx-auto mt-4 max-w-[880px] text-[18px] leading-[1.55] text-[#565D65] sm:text-[20px] tracking-[0.03em]"
+          >
+            Trade luxury goods, electronics, vehicles, and collectibles with
+            verified sellers. Every marketplace transaction is automatically
+            protected by escrow.
+          </p>
+        </div>
+
+        <!-- Top feature cards -->
+        <div
+          class="mt-16 grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4"
+        >
+          <!-- Card 1 -->
+          <div
+            class="rounded-[22px] border border-[#d9dbe1] bg-[#f8f8fa] px-8 py-7 text-center shadow-[0_2px_10px_rgba(15,23,42,0.04)]"
+          >
+            <div
+              class="mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-[18px] bg-[#2f6df6] shadow-[0_10px_24px_rgba(47,109,246,0.28)]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-9 w-9 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.9"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"
+                />
+              </svg>
+            </div>
+
+            <h3
+              class="mt-7 text-[20px] font-medium tracking-[0.03em] text-[#0F172B]"
+            >
+              Verified Sellers
+            </h3>
+
+            <p
+              class="mx-auto mt-4 max-w-[220px] text-[15px] leading-[1.6] text-[#565D65] tracking-[0.04em]"
+            >
+              Identity verification required before listing
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="rounded-[22px] border border-[#d9dbe1] bg-[#f8f8fa] px-8 py-7 text-center shadow-[0_2px_10px_rgba(15,23,42,0.04)]"
+          >
+            <div
+              class="mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-[18px] bg-[#0fb46e] shadow-[0_10px_24px_rgba(15,180,110,0.22)]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-9 w-9 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.9"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 11a2 2 0 012-2h1V7a6 6 0 1112 0v2h1a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7z"
+                />
+              </svg>
+            </div>
+
+            <h3
+              class="mt-7 text-[20px] font-medium tracking-[0.03em] text-[#0F172B]"
+            >
+              Automatic Escrow
+            </h3>
+
+            <p
+              class="mx-auto mt-4 max-w-[220px] text-[15px] leading-[1.6] text-[#565D65] tracking-[0.04em]"
+            >
+              Every transaction automatically protected
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="rounded-[22px] border border-[#d9dbe1] bg-[#f8f8fa] px-8 py-7 text-center shadow-[0_2px_10px_rgba(15,23,42,0.04)]"
+          >
+            <div
+              class="mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-[18px] bg-[#a432ff] shadow-[0_10px_24px_rgba(164,50,255,0.24)]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-9 w-9 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13 3L4 14h7l-1 7 9-11h-7l1-7z"
+                />
+              </svg>
+            </div>
+
+            <h3
+              class="mt-7 text-[20px] font-medium tracking-[0.03em] text-[#0F172B]"
+            >
+              Instant Payouts
+            </h3>
+
+            <p
+              class="mx-auto mt-4 max-w-[220px] text-[15px] leading-[1.6] text-[#565D65] tracking-[0.04em]"
+            >
+              Sellers paid immediately upon confirmation
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="rounded-[22px] border border-[#d9dbe1] bg-[#f8f8fa] px-8 py-7 text-center shadow-[0_2px_10px_rgba(15,23,42,0.04)]"
+          >
+            <div
+              class="mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-[18px] bg-[#5b52f6] shadow-[0_10px_24px_rgba(91,82,246,0.24)]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-9 w-9 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.9"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12l2 2 4-4"
+                />
+                <circle cx="12" cy="12" r="8"></circle>
+              </svg>
+            </div>
+
+            <h3
+              class="mt-7 text-[20px] font-medium tracking-[0.03em] text-[#0F172B]"
+            >
+              Quality Guarantee
+            </h3>
+
+            <p
+              class="mx-auto mt-4 max-w-[220px] text-[15px] leading-[1.6] text-[#565D65] tracking-[0.04em]"
+            >
+              Full refund if item doesn't match description
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom info cards -->
+        <div class="mt-11 grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <!-- Before Listing -->
+          <div class="rounded-[22px] bg-[#eaf1fb] px-7 py-7">
+            <h3
+              class="text-[20px] font-medium tracking-[0.03em] text-[#0F172B]"
+            >
+              Before Listing
+            </h3>
+            <p
+              class="mt-4 max-w-[310px] text-[16px] leading-[1.6] text-[#565D65] tracking-[0.04em]"
+            >
+              Every seller completes identity verification. No anonymous
+              accounts, no fake profiles.
+            </p>
+          </div>
+
+          <!-- During Transaction -->
+          <div class="rounded-[22px] bg-[#eaf8f1] px-7 py-7">
+            <h3
+              class="text-[20px] font-medium tracking-[0.03em] text-[#0F172B]"
+            >
+              During Transaction
+            </h3>
+            <p
+              class="mt-4 max-w-[330px] text-[16px] leading-[1.6] text-[#565D65] tracking-[0.04em]"
+            >
+              Payments held securely in escrow. Seller can't touch funds until
+              buyer confirms receipt.
+            </p>
+          </div>
+
+          <!-- After Delivery -->
+          <div class="rounded-[22px] bg-[#f2ebf8] px-7 py-7">
+            <h3
+              class="text-[20px] font-medium tracking-[0.03em] text-[#0F172B]"
+            >
+              After Delivery
+            </h3>
+            <p
+              class="mt-4 max-w-[330px] text-[16px] leading-[1.6] text-[#565D65] tracking-[0.04em]"
+            >
+              Inspect your item first. Only release payment when you're
+              completely satisfied.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hire Talent with Protected Payments -->
+    <section class="bg-[#f5f7fb] py-20 lg:py-24">
+      <div class="mx-auto max-w-[1380px] px-6 lg:px-8">
+        <!-- Top -->
+        <div class="mx-auto max-w-[860px] text-center">
+          <div
+            class="inline-flex items-center gap-2 rounded-full bg-transparent px-3 py-1 text-[15px] font-medium text-[#2f5bd3]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.9"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M7 7V6a5 5 0 0110 0v1m-8 0h6m-9 0h12a2 2 0 012 2v9a2 2 0 01-2 2H6a2 2 0 01-2-2V9a2 2 0 012-2z"
+              />
+            </svg>
+            <span>Service Marketplace</span>
+          </div>
+
+          <h2
+            class="mt-6 text-[39px] leading-[1] font-medium tracking-[0.01em] text-[#0F172B] sm:text-[42px] lg:text-[39px]"
+          >
+            Hire Talent with Protected Payments
+          </h2>
+
+          <p
+            class="mx-auto mt-4 max-w-[760px] text-[18px] leading-[1.55] text-[#565D65] tracking-[0.02em]"
+          >
+            Connect with freelancers, consultants, and professionals. Choose how
+            you want to structure payments—all protected by escrow.
+          </p>
+        </div>
+
+        <!-- Phones -->
+        <div
+          class="mx-auto mt-14 grid max-w-[1250px] grid-cols-1 gap-y-10 md:grid-cols-3 md:gap-x-10 lg:gap-x-30"
+        >
+          <!-- Phone 1 -->
+          <div class="flex justify-center">
+            <div
+              class="relative w-[290px] overflow-hidden"
+              style="height: 600px"
+            >
+              <!-- Replace src with your supplied image -->
+              <img
+                src="/images/talent-phone-3.png"
+                alt="Marketplace services screen"
+                class="h-full w-full object-cover object-top"
+              />
+            </div>
+          </div>
+
+          <!-- Phone 2 -->
+          <div class="flex justify-center">
+            <div
+              class="relative w-[290px] overflow-hidden"
+              style="height: 600px"
+            >
+              <!-- Replace src with your supplied image -->
+              <img
+                src="/images/talent-phone-2.png"
+                alt="Store info screen"
+                class="h-full w-full object-cover object-top"
+              />
+            </div>
+          </div>
+
+          <!-- Phone 3 -->
+          <div class="flex justify-center">
+            <div
+              class="relative w-[290px] overflow-hidden"
+              style="height: 600px"
+            >
+              <!-- Replace src with your supplied image -->
+              <img
+                src="/images/talent-phone-1.png"
+                alt="Service details screen"
+                class="h-full w-full object-cover object-top"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Cards -->
+        <div class="mt-14 grid grid-cols-1 gap-x-16 lg:grid-cols-3">
+          <!-- Card 1 -->
+          <div
+            class="rounded-[16px] border border-[#dde3ec] bg-white px-8 py-7 shadow-[0_4px_18px_rgba(15,23,42,0.04)]"
+          >
+            <div
+              class="flex h-[64px] w-[64px] items-center justify-center rounded-[16px] bg-[#2f6df6] shadow-[0_10px_22px_rgba(47,109,246,0.25)]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-9 w-9 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3v18m4-14H10a3 3 0 100 6h4a3 3 0 110 6H8"
+                />
+              </svg>
+            </div>
+
+            <h3
+              class="mt-8 text-[20px] font-medium tracking-[0.03em] text-[#010C18]"
+            >
+              Fixed Price
+            </h3>
+
+            <p
+              class="mt-4 max-w-[280px] text-[16px] leading-[1.55] text-[#565D65] tracking-[0.03em]"
+            >
+              One-time payment released upon project completion
+            </p>
+
+            <div
+              class="mt-8 inline-flex rounded-[10px] bg-[#F3F5FB] px-4 py-3 text-[13px] font-medium text-[#2A52BE]"
+            >
+              Perfect for defined scope projects
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="rounded-[22px] border border-[#dde3ec] bg-white px-8 py-7 shadow-[0_4px_18px_rgba(15,23,42,0.04)]"
+          >
+            <div
+              class="flex h-[64px] w-[64px] items-center justify-center rounded-[16px] bg-[#2f6df6] shadow-[0_10px_22px_rgba(47,109,246,0.25)]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-9 w-9 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.9"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8 7V5a4 4 0 118 0v2m-9 0h10a2 2 0 012 2v8a2 2 0 01-2 2H7a2 2 0 01-2-2V9a2 2 0 012-2z"
+                />
+              </svg>
+            </div>
+
+            <h3
+              class="mt-8 text-[22px] font-medium tracking-[0.03em] text-[#010C18]"
+            >
+              Milestone-Based
+            </h3>
+
+            <p
+              class="mt-4 max-w-[300px] text-[16px] leading-[1.55] text-[#565D65] tracking-[0.03em]"
+            >
+              Break projects into phases with escrow for each milestone
+            </p>
+
+            <div
+              class="mt-8 inline-flex rounded-[10px] bg-[#F3F5FB] px-4 py-3 text-[13px] font-medium text-[#2A52BE] tracking-[0.03em]"
+            >
+              Ideal for complex, multi-phase work
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="rounded-[22px] border border-[#dde3ec] bg-white px-8 py-7 shadow-[0_4px_18px_rgba(15,23,42,0.04)]"
+          >
+            <div
+              class="flex h-[64px] w-[64px] items-center justify-center rounded-[16px] bg-[#2f6df6] shadow-[0_10px_22px_rgba(47,109,246,0.25)]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-9 w-9 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M7 17L17 7m0 0h-6m6 0v6"
+                />
+              </svg>
+            </div>
+
+            <h3
+              class="mt-8 text-[22px] font-medium tracking-[0.03em] text-[#010C18]"
+            >
+              Hourly Rate
+            </h3>
+
+            <p
+              class="mt-4 max-w-[290px] text-[16px] leading-[1.55] text-[#565D65] tracking-[0.03em]"
+            >
+              Time-tracked work with periodic escrow releases
+            </p>
+
+            <div
+              class="mt-8 inline-flex rounded-[10px] bg-[#F3F5FB] px-4 py-3 text-[13px] font-medium text-[#2A52BE] tracking-[0.03em]"
+            >
+              Best for ongoing consultations
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How Service Escrow Works -->
+    <section class="py-24 lg:py-28 bg-white">
+      <div class="mx-auto max-w-[1500px] px-6 lg:px-8">
+        <div
+          class="mx-auto max-w-[1450px] rounded-[34px] bg-[#010C18] px-10 py-16 sm:px-14 lg:px-20 lg:py-16"
+        >
+          <!-- Heading -->
+          <div class="text-center">
+            <h2
+              class="text-[39px] leading-[1] font-medium tracking-[0.01em] text-white sm:text-[42px] lg:text-[39px]"
+            >
+              How Service Escrow Works
+            </h2>
+          </div>
+
+          <!-- Steps -->
+          <div
+            class="mt-14 grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-10 lg:mt-16 lg:grid-cols-4 lg:gap-x-8"
+          >
+            <!-- Step 1 -->
+            <div class="text-center">
+              <div
+                class="mx-auto flex h-[62px] w-[62px] items-center justify-center rounded-full bg-[#2A52BE] text-[30px] font-regular text-white"
+              >
+                1
+              </div>
+
+              <h3
+                class="mt-7 text-[20px] font-medium tracking-[0.02em] text-white"
+              >
+                Define Terms
+              </h3>
+
+              <p
+                class="mx-auto mt-4 max-w-[250px] text-[14px] leading-[1.55] text-[#DBEAFE] tracking-[0.03em]"
+              >
+                Set milestones, deliverables, and payment schedule
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="text-center">
+              <div
+                class="mx-auto flex h-[62px] w-[62px] items-center justify-center rounded-full bg-[#2A52BE] text-[30px] font-regular text-white"
+              >
+                2
+              </div>
+
+              <h3
+                class="mt-7 text-[20px] font-medium tracking-[0.02em] text-white"
+              >
+                Fund Escrow
+              </h3>
+
+              <p
+                class="mx-auto mt-4 max-w-[260px] text-[14px] leading-[1.55] text-[#DBEAFE] tracking-[0.03em]"
+              >
+                Client deposits payment for first milestone
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="text-center">
+              <div
+                class="mx-auto flex h-[62px] w-[62px] items-center justify-center rounded-full bg-[#2A52BE] text-[30px] font-regular text-white"
+              >
+                3
+              </div>
+
+              <h3
+                class="mt-7 text-[20px] font-medium tracking-[0.02em] text-white"
+              >
+                Work Delivered
+              </h3>
+
+              <p
+                class="mx-auto mt-4 max-w-[260px] text-[14px] leading-[1.55] text-[#DBEAFE] tracking-[0.03em]"
+              >
+                Freelancer completes and submits work
+              </p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="text-center">
+              <div
+                class="mx-auto flex h-[62px] w-[62px] items-center justify-center rounded-full bg-[#2A52BE] text-[30px] font-regular text-white"
+              >
+                4
+              </div>
+
+              <h3
+                class="mt-7 text-[20px] font-medium tracking-[0.02em] text-white"
+              >
+                Release Payment
+              </h3>
+
+              <p
+                class="mx-auto mt-4 max-w-[270px] text-[14px] leading-[1.55] text-[#DBEAFE] tracking-[0.03em]"
+              >
+                Client approves, funds released instantly
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who can use PayBuyTrust -->
+
+    <section class="bg-[#F7F7F8] py-24 lg:py-28">
+      <div class="mx-auto max-w-[1540px] px-6 lg:px-10">
+        <!-- Heading -->
+        <div class="text-center">
+          <h2
+            class="mt-6 text-[39px] leading-[1] font-medium tracking-[0.01em] text-[#0f172a] sm:text-[42px] lg:text-[39px]"
+          >
+            Who can use PayBuyTrust
+          </h2>
+        </div>
+
+        <!-- Slider wrapper -->
+        <div class="relative mt-16">
+          <!-- Prev Button -->
+          <button
+            id="who-can-use-prev"
+            type="button"
+            class="absolute left-0 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-[0_8px_24px_rgba(15,23,42,0.12)] lg:flex"
+            aria-label="Previous slide"
+          >
+            <svg class="h-5 w-5 text-[#0f172a]" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M15 18L9 12L15 6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <!-- Next Button -->
+          <button
+            id="who-can-use-next"
+            type="button"
+            class="absolute right-0 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-[0_8px_24px_rgba(15,23,42,0.12)] lg:flex"
+            aria-label="Next slide"
+          >
+            <svg class="h-5 w-5 text-[#0f172a]" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 18L15 12L9 6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <!-- Track -->
+          <div
+            id="who-can-use-slider"
+            class="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-4 scrollbar-hide lg:px-14"
+          >
+            <!-- Card 1 -->
+            <article
+              class="min-w-[88%] snap-start overflow-hidden rounded-[28px] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.08)] sm:min-w-[48%] lg:min-w-[calc((100%-48px)/3)]"
+            >
+              <div class="relative h-[290px] w-full overflow-hidden">
+                <img
+                  src="/images/FreelancerClients.png"
+                  alt="Freelancers and clients"
+                  class="h-full w-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/45 via-black/12 to-transparent"
+                ></div>
+              </div>
+
+              <div class="px-8 pb-10 pt-8">
+                <h3
+                  class="text-[25px] font-medium leading-[1.15] tracking-[0.03em] text-[#0f172a]"
+                >
+                  Freelancers &amp; Clients
+                </h3>
+
+                <p
+                  class="mt-6 max-w-[330px] text-[16px] leading-[1.6] tracking-[0.04em] text-[#565D65]"
+                >
+                  Protect project payments until work is delivered and approved.
+                  Perfect for developers, designers, and consultants.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article
+              class="min-w-[88%] snap-start overflow-hidden rounded-[28px] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.08)] sm:min-w-[48%] lg:min-w-[calc((100%-48px)/3)]"
+            >
+              <div class="relative h-[290px] w-full overflow-hidden">
+                <img
+                  src="/images/OnlineBuyersSellers.png"
+                  alt="Online buyers and sellers"
+                  class="h-full w-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/45 via-black/12 to-transparent"
+                ></div>
+              </div>
+
+              <div class="px-8 pb-10 pt-8">
+                <h3
+                  class="text-[25px] font-medium leading-[1.15] tracking-[0.03em] text-[#0f172a]"
+                >
+                  Online Buyers &amp; Sellers
+                </h3>
+
+                <p
+                  class="mt-6 max-w-[330px] text-[16px] leading-[1.6] tracking-[0.04em] text-[#565D65]"
+                >
+                  Buy and sell with confidence. Whether it's electronics,
+                  collectibles, or services, we've got you covered.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article
+              class="min-w-[88%] snap-start overflow-hidden rounded-[28px] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.08)] sm:min-w-[48%] lg:min-w-[calc((100%-48px)/3)]"
+            >
+              <div class="relative h-[290px] w-full overflow-hidden">
+                <img
+                  src="/images/High-Value.png"
+                  alt="High-value transactions"
+                  class="h-full w-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/45 via-black/12 to-transparent"
+                ></div>
+              </div>
+
+              <div class="px-8 pb-10 pt-8">
+                <h3
+                  class="text-[25px] font-medium leading-[1.15] tracking-[0.03em] text-[#0f172a]"
+                >
+                  High-Value Transactions
+                </h3>
+
+                <p
+                  class="mt-6 max-w-[330px] text-[16px] leading-[1.6] tracking-[0.04em] text-[#565D65]"
+                >
+                  Enterprise deals, domain sales, vehicle purchases. Trust our
+                  secure platform for your most important transactions.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 1 -->
+            <article
+              class="min-w-[88%] snap-start overflow-hidden rounded-[28px] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.08)] sm:min-w-[48%] lg:min-w-[calc((100%-48px)/3)]"
+            >
+              <div class="relative h-[290px] w-full overflow-hidden">
+                <img
+                  src="/images/FreelancerClients.png"
+                  alt="Freelancers and clients"
+                  class="h-full w-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/45 via-black/12 to-transparent"
+                ></div>
+              </div>
+
+              <div class="px-8 pb-10 pt-8">
+                <h3
+                  class="text-[25px] font-medium leading-[1.15] tracking-[0.03em] text-[#0f172a]"
+                >
+                  Freelancers &amp; Clients
+                </h3>
+
+                <p
+                  class="mt-6 max-w-[330px] text-[16px] leading-[1.6] tracking-[0.04em] text-[#565D65]"
+                >
+                  Protect project payments until work is delivered and approved.
+                  Perfect for developers, designers, and consultants.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why you should work with us -->
+
+    <section class="bg-white pb-12">
+      <div class="mx-auto max-w-[1380px] px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center pt-16">
+          <h2
+            class="text-[39px] leading-[1] font-medium tracking-[-0.01em] text-[#0f172a] sm:text-[42px] lg:text-[39px]"
+          >
+            Why you should work with us
+          </h2>
+
+          <p
+            class="mx-auto mt-4 max-w-[680px] text-[16px] leading-[1.55] text-[#565D65] tracking-[0.02em]"
+          >
+            Comprehensive protection designed for both parties
+          </p>
+        </div>
+
+        <!-- Two Columns -->
+        <div
+          class="relative mt-20 grid grid-cols-1 gap-y-14 lg:grid-cols-2 lg:gap-x-24"
+        >
+          <!-- Center divider -->
+          <div
+            class="absolute left-1/2 top-[38px] hidden h-[440px] w-px -translate-x-1/2 bg-[#d9dde4] lg:block"
+          ></div>
+
+          <!-- LEFT / BUYERS -->
+          <div>
+            <!-- Label -->
+            <div class="flex items-center gap-4">
+              <div
+                class="flex h-[58px] w-[58px] items-center justify-center rounded-[16px] bg-[#2f5bd3]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.9"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"
+                  />
+                </svg>
+              </div>
+
+              <h3
+                class="text-[25px] font-medium tracking-[0.02em] text-[#111827]"
+              >
+                For Buyers
+              </h3>
+            </div>
+
+            <!-- Buyer Cards -->
+            <div class="mt-10 space-y-7">
+              <!-- item -->
+              <div
+                class="rounded-[20px] border border-[#d8e5fb] bg-[#eaf1fb] px-7 py-7"
+              >
+                <div class="flex items-start gap-5">
+                  <div
+                    class="flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-[14px] bg-white shadow-[0_4px_10px_rgba(15,23,42,0.06)]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-8 w-8 text-[#2563ff]"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="1.9"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <h4 class="text-[20px] font-medium text-[#2B353F]">
+                      Payment Protection
+                    </h4>
+
+                    <p class="mt-2 text-[16px] leading-[1.55] text-[#5f6773]">
+                      Your money is safe until you confirm satisfaction
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- item -->
+              <div
+                class="rounded-[20px] border border-[#d8e5fb] bg-[#eaf1fb] px-7 py-7"
+              >
+                <div class="flex items-start gap-5">
+                  <div
+                    class="flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-[14px] bg-white shadow-[0_4px_10px_rgba(15,23,42,0.06)]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-8 w-8 text-[#2563ff]"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="1.9"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 12l2 2 4-4"
+                      />
+                      <circle cx="12" cy="12" r="8"></circle>
+                    </svg>
+                  </div>
+
+                  <div>
+                    <h4 class="text-[20px] font-medium text-[#2B353F]">
+                      Verify Before Release
+                    </h4>
+
+                    <p class="mt-2 text-[16px] leading-[1.55] text-[#5f6773]">
+                      Inspect goods/services before funds are released
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- item -->
+              <div
+                class="rounded-[20px] border border-[#d8e5fb] bg-[#eaf1fb] px-7 py-7"
+              >
+                <div class="flex items-start gap-5">
+                  <div
+                    class="flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-[14px] bg-white shadow-[0_4px_10px_rgba(15,23,42,0.06)]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-8 w-8 text-[#2563ff]"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="1.9"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4 4v5h5M20 20v-5h-5"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M20 9a8 8 0 00-14-5M4 15a8 8 0 0014 5"
+                      />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <h4 class="text-[20px] font-medium text-[#2B353F]">
+                      Dispute Resolution
+                    </h4>
+
+                    <p class="mt-2 text-[16px] leading-[1.55] text-[#5f6773]">
+                      Fair mediation if something goes wrong
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT / SELLERS -->
+          <div>
+            <!-- Label -->
+            <div class="flex items-center gap-4">
+              <div
+                class="flex h-[58px] w-[58px] items-center justify-center rounded-[16px] bg-[#34c759]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 3v18m4-14H10a3 3 0 100 6h4a3 3 0 110 6H8"
+                  />
+                </svg>
+              </div>
+
+              <h3
+                class="text-[25px] font-medium tracking-[0.02em] text-[#111827]"
+              >
+                For Sellers
+              </h3>
+            </div>
+
+            <!-- Seller Cards -->
+            <div class="mt-10 space-y-7">
+              <!-- item -->
+              <div
+                class="rounded-[20px] border border-[#cdeedb] bg-[#eaf8f1] px-7 py-7"
+              >
+                <div class="flex items-start gap-5">
+                  <div
+                    class="flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-[14px] bg-white shadow-[0_4px_10px_rgba(15,23,42,0.06)]"
+                  >
+                    <span class="text-[30px] font-medium text-[#00a169]"
+                      >$</span
+                    >
+                  </div>
+
+                  <div>
+                    <h4 class="text-[20px] font-medium text-[#2B353F]">
+                      Guaranteed Payment
+                    </h4>
+
+                    <p class="mt-2 text-[16px] leading-[1.55] text-[#5f6773]">
+                      Funds are secured before you start work
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- item -->
+              <div
+                class="rounded-[20px] border border-[#cdeedb] bg-[#eaf8f1] px-7 py-7"
+              >
+                <div class="flex items-start gap-5">
+                  <div
+                    class="flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-[14px] bg-white shadow-[0_4px_10px_rgba(15,23,42,0.06)]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-8 w-8 text-[#00a169]"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="1.9"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 11a2 2 0 012-2h1V7a6 6 0 1112 0v2h1a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <h4 class="text-[20px] font-medium text-[#2B353F]">
+                      Chargeback Protection
+                    </h4>
+
+                    <p class="mt-2 text-[16px] leading-[1.55] text-[#5f6773]">
+                      No fraudulent payment reversals
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- item -->
+              <div
+                class="rounded-[20px] border border-[#cdeedb] bg-[#eaf8f1] px-7 py-7"
+              >
+                <div class="flex items-start gap-5">
+                  <div
+                    class="flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-[14px] bg-white shadow-[0_4px_10px_rgba(15,23,42,0.06)]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-8 w-8 text-[#00a169]"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13 3L4 14h7l-1 7 9-11h-7l1-7z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <h4 class="text-[20px] font-medium text-[#2B353F]">
+                      Fast Payouts
+                    </h4>
+
+                    <p class="mt-2 text-[16px] leading-[1.55] text-[#5f6773]">
+                      Receive funds instantly upon confirmation
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom divider -->
+        <div class="mx-auto mt-20 h-px max-w-[1200px] bg-[#d9dde4]"></div>
+      </div>
+    </section>
+
+    <!-- DISPUTE PROTECTION -->
+    <section class="bg-white py-12 lg:py-25">
+      <div class="mx-auto max-w-[1560px] px-6 lg:px-10">
+        <!-- Header -->
+        <div class="mx-auto max-w-[820px] text-center">
+          <div
+            class="inline-flex items-center gap-2 rounded-full border border-[#f1dca0] bg-[#fffaf0] px-5 py-2 text-[15px] font-medium text-[#c99a2e]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.9"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 3v18m-7-5h14M6 7h4l-2 4h4m6-4h-4l2 4h-4"
+              />
+            </svg>
+            <span>Fair &amp; Neutral</span>
+          </div>
+
+          <h2
+            class="mt-6 text-[39px] leading-[1] font-medium tracking-[0.01em] text-[#0f172a] sm:text-[42px] lg:text-[39px]"
+          >
+            Dispute Protection
+          </h2>
+
+          <p
+            class="mx-auto mt-4 max-w-[460px] text-[16px] leading-[1.55] text-[#565D65] tracking-[0.02em]"
+          >
+            If something goes wrong, we're here to help. Our mediation team
+            ensures a fair outcome for all parties.
+          </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
+          <!-- Card 1 -->
+          <article
+            class="rounded-[20px] border border-[#dfe3ea] bg-[#f8f9fb] px-8 pt-8 pb-0"
+          >
+            <p class="text-[16px] font-semibold text-[#8b9098]">Step 1</p>
+
+            <div
+              class="mt-8 flex h-[72px] w-[72px] items-center justify-center rounded-[18px] bg-[#ff8a00] shadow-[0_10px_24px_rgba(255,138,0,0.28)]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="9"></circle>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 8v5"
+                />
+                <circle
+                  cx="12"
+                  cy="16.5"
+                  r="0.7"
+                  fill="currentColor"
+                  stroke="none"
+                ></circle>
+              </svg>
+            </div>
+
+            <h3
+              class="mt-8 text-[20px] font-medium tracking-[0.02em] text-[#0F172B]"
+            >
+              Raise Dispute
+            </h3>
+
+            <p
+              class="mt-4 max-w-[290px] text-[16px] leading-[1.6] text-[#565D65]"
+            >
+              Easily open a dispute through your dashboard if there's an issue
+            </p>
+          </article>
+
+          <!-- Card 2 -->
+          <article
+            class="rounded-[20px] border border-[#dfe3ea] bg-[#f8f9fb] px-8 pb-0 pt-8"
+          >
+            <p class="text-[16px] font-semibold text-[#8b9098]">Step 2</p>
+
+            <div
+              class="mt-8 flex h-[72px] w-[72px] items-center justify-center rounded-[18px] bg-[#4a6cf7] shadow-[0_10px_24px_rgba(74,108,247,0.28)]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.9"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8 3h6l5 5v12a1 1 0 01-1 1H8a2 2 0 01-2-2V5a2 2 0 012-2z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14 3v5h5M9 12h6M9 16h6M9 8h2"
+                />
+              </svg>
+            </div>
+
+            <h3
+              class="mt-8 text-[20px] font-medium tracking-[0.02em] text-[0F172B]"
+            >
+              Submit Evidence
+            </h3>
+
+            <p
+              class="mt-4 max-w-[300px] text-[16px] leading-[1.6] text-[#565D65]"
+            >
+              Both parties provide documentation, photos, and communication
+              records
+            </p>
+          </article>
+
+          <!-- Card 3 -->
+          <article
+            class="rounded-[20px] border border-[#dfe3ea] bg-[#f8f9fb] px-8 pb-0 pt-8"
+          >
+            <p class="text-[16px] font-semibold text-[#8b9098]">Step 3</p>
+
+            <div
+              class="mt-8 flex h-[72px] w-[72px] items-center justify-center rounded-[18px] bg-[#a548f5] shadow-[0_10px_24px_rgba(165,72,245,0.28)]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.9"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4v14M7 6h10M5 10l3 5 3-5M13 10l3 5 3-5M5 20h14"
+                />
+              </svg>
+            </div>
+
+            <h3
+              class="mt-8 text-[20px] font-medium tracking-[0.02em] text-[#0F172B]"
+            >
+              Mediation
+            </h3>
+
+            <p
+              class="mt-4 max-w-[305px] text-[16px] leading-[1.6] text-[#565D65]"
+            >
+              Our neutral team reviews all evidence and communications fairly
+            </p>
+          </article>
+
+          <!-- Card 4 -->
+          <article
+            class="rounded-[20px] border border-[#dfe3ea] bg-[#f8f9fb] px-8 pb-6 pt-6"
+          >
+            <p class="text-[16px] font-semibold text-[#8b9098]">Step 4</p>
+
+            <div
+              class="mt-8 flex h-[72px] w-[72px] items-center justify-center rounded-[18px] bg-[#12c2a2] shadow-[0_10px_24px_rgba(18,194,162,0.26)]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="9"></circle>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8 12l2.5 2.5L16 9"
+                />
+              </svg>
+            </div>
+
+            <h3
+              class="mt-8 text-[20px] font-medium tracking-[0.02em] text-[#0F172B]"
+            >
+              Resolution
+            </h3>
+
+            <p
+              class="mt-4 max-w-[300px] text-[16px] leading-[1.6] text-[#565D65]"
+            >
+              A fair decision is made and funds are distributed accordingly
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Protect Every Deal. -->
+    <section class="overflow-hidden bg-[#f5f7fb]">
+      <div
+        class="mx-auto grid max-w-[1600px] grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2 lg:px-10"
+      >
+        <!-- Left -->
+        <div class="max-w-[760px] lg:pl-10 xl:pl-20">
+          <div
+            class="inline-flex items-center gap-3 rounded-full border border-[#b8bec9] px-6 py-3 text-[16px] font-medium text-[#111827] lg:text-[18px]"
+          >
+            <span class="text-[#10b981]">✦</span>
+            <span>Get started in under 2 minutes</span>
+          </div>
+
+          <h1
+            class="mt-8 text-[38px] font-semibold leading-[1.02] tracking-[-0.04em] sm:text-[42px] md:text-[46px] lg:text-[49px]"
+          >
+            <span class="block text-[#04101f]">Protect Every Deal.</span>
+            <span
+              class="block bg-gradient-to-r from-[#0ea76b] via-[#1197ae] to-[#2f6df6] bg-clip-text text-transparent"
+            >
+              Pay only when satisfied.
+            </span>
+          </h1>
+
+          <p
+            class="mt-6 max-w-[620px] text-[20px] leading-[1.45] text-[#111827]"
+          >
+            Escrow protection built for real-world transactions.
+          </p>
+
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="#"
+              class="inline-flex h-[64px] items-center gap-4 rounded-full border border-[#9ca3af] px-6 text-[18px] font-medium text-[#0f172a]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="h-7 w-7 fill-current"
+              >
+                <path
+                  d="M3.609 2.601c-.31.16-.509.483-.509.87v17.058c0 .387.199.71.509.87l9.714-9.399L3.609 2.601z"
+                />
+                <path d="M15.268 10.109 5.393.552l11.62 6.361-1.745 3.196z" />
+                <path
+                  d="M17.013 17.087 5.393 23.448l9.875-9.557 1.745 3.196z"
+                />
+                <path
+                  d="M20.391 10.421 17.95 9.084 16.014 12l1.936 2.916 2.441-1.337c.38-.208.618-.592.618-1.021s-.238-.813-.618-1.021z"
+                />
+              </svg>
+
+              <span class="h-6 w-px bg-[#9ca3af]"></span>
+              <span>Google Play</span>
+            </a>
+
+            <a
+              href="#"
+              class="inline-flex h-[64px] items-center gap-4 rounded-full border border-[#9ca3af] px-6 text-[18px] font-medium text-[#0f172a]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+                class="h-7 w-7 fill-current"
+              >
+                <path
+                  d="M318.7 268.7c-.2-36.7 16.4-64.3 49.9-84.7-18.7-26.8-46.8-41.5-84.1-44.3-35.2-2.8-73.6 20.7-87.7 20.7-14.9 0-48.7-19.8-75.5-19.8C66.2 141.1 0 207.1 0 339.5c0 39.2 7.2 79.7 21.7 121.6 19.3 55.3 88.9 101.6 129.7 100 22.7-.9 38.7-16.1 68.2-16.1 28.6 0 43.4 16.1 68.8 16.1 41.1-.6 104.4-42.7 122.7-97.8-97.7-46-92.4-185.1-92.4-194.6zM260.5 93.3C287.7 60.6 285.8 30.9 285 20c-24 .8-51.7 16.3-67.5 34.7-17.4 19.8-27.6 44.3-25.4 71.5 25.9 2 49.2-11.3 68.4-32.9z"
+                />
+              </svg>
+
+              <span class="h-6 w-px bg-[#9ca3af]"></span>
+              <span>App Store</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div
+          class="relative h-[320px] sm:h-[380px] md:h-[430px] lg:h-[520px] xl:h-[560px] mt-12"
+        >
+          <img
+            src="/images/cut-phone.jpeg"
+            alt="PayBuyTrust app preview"
+            class="h-full w-auto max-w-none object-contain"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Your Guide to secure Payment. -->
+    <section class="bg-white py-24 lg:py-28">
+      <div class="mx-auto max-w-[1580px] px-6 lg:px-10">
+        <div class="grid grid-cols-1 gap-14 lg:grid-cols-[420px_1fr] lg:gap-20">
+          <!-- LEFT PANEL -->
+          <div class="pt-12">
+            <div
+              class="inline-flex items-center gap-2 rounded-full bg-[#eef2ff] px-5 py-3 text-[13px] font-regular text-[#2A52BE]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 10v6M12 7h.01" stroke-linecap="round" />
+              </svg>
+              <span>FAQs</span>
+            </div>
+
+            <h2
+              class="mt-3 text-[39px] leading-[1] font-medium tracking-[0.05em] text-[#0f172a] sm:text-[42px] lg:text-[39px]"
+            >
+              Your Guide to secure Payment.
+            </h2>
+          </div>
+
+          <!-- RIGHT FAQ -->
+          <div class="border-l border-r border-[#d9dde4]">
+            <!-- Item 1 -->
+            <div class="faq-item border-t border-[#d9dde4]">
+              <button
+                type="button"
+                class="faq-trigger flex w-full items-start justify-between gap-8 px-10 py-6 text-left"
+              >
+                <div class="flex gap-5">
+                  <span class="pt-2 text-[18px] font-semibold text-[#8b9098]"
+                    >01</span
+                  >
+                  <div>
+                    <h3
+                      class="text-[25px] font-medium tracking-[0.03em] text-[#010C18]"
+                    >
+                      How does escrow work on this platform?
+                    </h3>
+                  </div>
+                </div>
+
+                <span
+                  class="faq-icon flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[8px] bg-[#3b63dd] text-white transition-transform duration-300"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path class="faq-icon-vertical" d="M12 5v14" />
+                    <path d="M5 12h14" />
+                  </svg>
+                </span>
+              </button>
+
+              <div class="faq-content grid grid-rows-[1fr] px-10 pb-6">
+                <div class="overflow-hidden">
+                  <div class="ml-[38px] max-w-[760px]">
+                    <p class="text-[20px] tracking-[0.02em] text-[#2B353F]">
+                      We hold the buyer’s payment securely until both parties
+                      confirm that the agreement has been fulfilled. Once
+                      confirmed, the funds are released to the seller.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="faq-item border-t border-[#d9dde4]">
+              <button
+                type="button"
+                class="faq-trigger flex w-full items-center justify-between gap-8 px-10 py-9 text-left"
+              >
+                <div class="flex items-center gap-5">
+                  <span class="text-[18px] font-semibold text-[#8b9098]"
+                    >02</span
+                  >
+                  <h3
+                    class="text-[25px] font-medium tracking-[0.03em] text-[#010C18]"
+                  >
+                    When does the seller receive payment?
+                  </h3>
+                </div>
+
+                <span
+                  class="faq-icon flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[8px] bg-[#3b63dd] text-white transition-transform duration-300"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path class="faq-icon-vertical" d="M12 5v14" />
+                    <path d="M5 12h14" />
+                  </svg>
+                </span>
+              </button>
+
+              <div class="faq-content hidden px-10 pb-9">
+                <div class="ml-[38px] max-w-[760px]">
+                  <p
+                    class="text-[20px] leading-[1.6] tracking-[0.02em] text-[#2B353F]"
+                  >
+                    The seller receives payment only after the buyer confirms
+                    that the agreed goods or services have been delivered
+                    successfully.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="faq-item border-t border-[#d9dde4]">
+              <button
+                type="button"
+                class="faq-trigger flex w-full items-center justify-between gap-8 px-10 py-9 text-left"
+              >
+                <div class="flex items-center gap-5">
+                  <span class="text-[18px] font-semibold text-[#8b9098]"
+                    >03</span
+                  >
+                  <h3
+                    class="text-[25px] font-medium tracking-[0.03em] text-[#010C18]"
+                  >
+                    What happens if there’s a problem with the transaction?
+                  </h3>
+                </div>
+
+                <span
+                  class="faq-icon flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[8px] bg-[#3b63dd] text-white transition-transform duration-300"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path class="faq-icon-vertical" d="M12 5v14" />
+                    <path d="M5 12h14" />
+                  </svg>
+                </span>
+              </button>
+
+              <div class="faq-content hidden px-10 pb-9">
+                <div class="ml-[38px] max-w-[760px]">
+                  <p
+                    class="text-[20px] leading-[1.6] tracking-[0.02em] text-[#2B353F]"
+                  >
+                    If there is an issue, the transaction can be reviewed
+                    through the dispute process before any funds are released.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="faq-item border-t border-[#d9dde4]">
+              <button
+                type="button"
+                class="faq-trigger flex w-full items-center justify-between gap-8 px-10 py-9 text-left"
+              >
+                <div class="flex items-center gap-5">
+                  <span class="text-[18px] font-semibold text-[#8b9098]"
+                    >04</span
+                  >
+                  <h3
+                    class="text-[25px] font-medium tracking-[0.03em] text-[#010C18]"
+                  >
+                    Can I open a dispute after delivery?
+                  </h3>
+                </div>
+
+                <span
+                  class="faq-icon flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[8px] bg-[#3b63dd] text-white transition-transform duration-300"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path class="faq-icon-vertical" d="M12 5v14" />
+                    <path d="M5 12h14" />
+                  </svg>
+                </span>
+              </button>
+
+              <div class="faq-content hidden px-10 pb-9">
+                <div class="ml-[38px] max-w-[760px]">
+                  <p
+                    class="text-[20px] leading-[1.6] tracking-[0.02em] text-[#2B353F]"
+                  >
+                    Yes, if the delivery does not match the agreement, you can
+                    raise a dispute within the allowed review period.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="faq-item border-y border-[#d9dde4]">
+              <button
+                type="button"
+                class="faq-trigger flex w-full items-center justify-between gap-8 px-10 py-9 text-left"
+              >
+                <div class="flex items-center gap-5">
+                  <span class="text-[18px] font-semibold text-[#8b9098]"
+                    >05</span
+                  >
+                  <h3
+                    class="text-[25px] font-medium tracking-[0.03em] text-[#010C18]"
+                  >
+                    Are payments refunded if a dispute is ruled in my favor?
+                  </h3>
+                </div>
+
+                <span
+                  class="faq-icon flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[8px] bg-[#3b63dd] text-white transition-transform duration-300"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path class="faq-icon-vertical" d="M12 5v14" />
+                    <path d="M5 12h14" />
+                  </svg>
+                </span>
+              </button>
+
+              <div class="faq-content hidden px-10 pb-9">
+                <div class="ml-[38px] max-w-[760px]">
+                  <p
+                    class="text-[20px] leading-[1.6] tracking-[0.02em] text-[#2B353F]"
+                  >
+                    Yes, if the dispute decision favors you, the payment can be
+                    returned according to the platform’s resolution policy.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stay Updated With Paybuytrust -->
+    <section class="bg-[#f3f3f5]">
+      <div class="mx-auto max-w-[1640px] px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
+        <div class="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+          <!-- Left content -->
+          <div class="max-w-[640px]">
+            <h2
+             class="mt-3 text-[39px] leading-[1] font-medium tracking-[0.05em] text-[#0f172a] sm:text-[42px] lg:text-[39px]"
+            >
+              Stay Updated With<br />
+              Paybuytrust
+            </h2>
+
+            <p
+              class="mt-10 max-w-[760px] text-[18px] leading-[1.9] text-[#60666D] tracking-[0.02em] text-regular"
+            >
+              Be the first to know about platform updates, security
+              enhancements, and smarter ways to transact safely.
+            </p>
+          </div>
+
+          <!-- Right form -->
+          <div class="w-full mt-14">
+            <form
+              class="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-end mt-8"
+            >
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                class="h-[48px] w-full rounded-[7px] border border-[#565D65] bg-white px-7 text-[18px] text-[#0f1c2c] placeholder:text-[#8b919a] focus:border-[#3157c8] focus:outline-none"
+              />
+
+              <button
+                type="submit"
+                class="h-[48px] rounded-[7px] bg-[#2A52BE] px-5 text-[16px] font-medium text-white transition hover:opacity-90"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER SECTION -->
+    <section class="relative overflow-hidden bg-[#081026] text-white">
+      <!-- background watermark -->
+      <div
+        class="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center"
+      >
+        <img
+          src="/images/_2935518764832.png"
+          alt=""
+          class="w-[88%] max-w-[1380px] opacity-[1.02]"
+        />
+      </div>
+
+      <div
+        class="relative mx-auto max-w-[1640px] px-6 py-16 sm:px-10 lg:px-16 lg:py-20"
+      >
+        <!-- top grid -->
+        <div
+          class="grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-4 lg:gap-10"
+        >
+          <!-- brand -->
+          <div class="max-w-[310px]">
+            <a href="#" class="inline-block">
+              <img
+                src="/images/logo-white.png"
+                alt="PayBuy Trust"
+                class="h-auto w-[150px]"
+              />
+            </a>
+
+            <p
+              class="mt-8 max-w-[300px] text-[18px] leading-[1.65] text-white/80"
+            >
+              Protecting online transactions with trust, transparency, and
+              security.
+            </p>
+
+            <div class="mt-7 flex items-center gap-3">
+              <a
+                href="#"
+                class="flex h-11 w-11 items-center justify-center rounded-[12px] border border-white/10 bg-white/5 text-white/90 transition hover:bg-white/10"
+                aria-label="Twitter"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 5.8c-.7.3-1.5.6-2.3.7a4 4 0 0 0 1.7-2.2 8.1 8.1 0 0 1-2.6 1A4 4 0 0 0 12 8.1a11.4 11.4 0 0 1-8.3-4.2 4 4 0 0 0 1.2 5.4A3.9 3.9 0 0 1 3 8.8v.1a4 4 0 0 0 3.2 3.9 4 4 0 0 1-1.8.1 4 4 0 0 0 3.7 2.8A8.1 8.1 0 0 1 2 17.5a11.4 11.4 0 0 0 6.2 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5A8.4 8.4 0 0 0 22 5.8Z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="flex h-11 w-11 items-center justify-center rounded-[12px] border border-white/10 bg-white/5 text-white/90 transition hover:bg-white/10"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" rx="1" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="flex h-11 w-11 items-center justify-center rounded-[12px] border border-white/10 bg-white/5 text-white/90 transition hover:bg-white/10"
+                aria-label="Instagram"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- product -->
+          <div>
+            <h3 class="text-[22px] font-semibold leading-none text-white">
+              Product
+            </h3>
+            <ul class="mt-8 space-y-5">
+              <li>
+                <a
+                  href="#"
+                  class="text-[18px] text-white/80 transition hover:text-white"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[18px] text-white/80 transition hover:text-white"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[18px] text-white/80 transition hover:text-white"
+                  >Security</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[18px] text-white/80 transition hover:text-white"
+                  >Dispute Resolution</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- company -->
+          <div>
+            <h3 class="text-[22px] font-semibold leading-none text-white">
+              Company
+            </h3>
+            <ul class="mt-8 space-y-5">
+              <li>
+                <a
+                  href="#"
+                  class="text-[18px] text-white/80 transition hover:text-white"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[18px] text-white/80 transition hover:text-white"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[18px] text-white/80 transition hover:text-white"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-[18px] text-white/80 transition hover:text-white"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- contact -->
+          <div>
+            <h3 class="text-[22px] font-semibold leading-none text-white">
+              Contact
+            </h3>
+            <ul class="mt-8 space-y-5">
+              <li class="flex items-center gap-4 text-[18px] text-white/80">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 text-white/90"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="m4 7 8 6 8-6" />
+                </svg>
+                <a
+                  href="mailto:support@secureescrow.com"
+                  class="transition hover:text-white"
+                >
+                  support@secureescrow.com
+                </a>
+              </li>
+
+              <li class="flex items-center gap-4 text-[18px] text-white/80">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 text-white/90"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6.2 6.2l1.4-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7A2 2 0 0 1 22 16.9Z"
+                  />
+                </svg>
+                <a
+                  href="tel:+2348001234567"
+                  class="transition hover:text-white"
+                >
+                  +234 800 123 4567
+                </a>
+              </li>
+
+              <li class="flex items-center gap-4 text-[18px] text-white/80">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 text-white/90"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M12 21s-6-4.35-6-10a6 6 0 1 1 12 0c0 5.65-6 10-6 10Z"
+                  />
+                  <circle cx="12" cy="11" r="2.5" />
+                </svg>
+                <span>Lagos, Nigeria</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- divider -->
+        <div class="mt-14 h-px w-full bg-white/20"></div>
+
+        <!-- bottom -->
+        <div
+          class="flex flex-col gap-6 py-10 text-[17px] text-white/80 md:flex-row md:items-center md:justify-between"
+        >
+          <p>© 2026 SecureEscrow. All rights reserved.</p>
+
+          <div class="flex flex-wrap items-center gap-6 md:gap-8">
+            <a href="#" class="transition hover:text-white">Terms</a>
+            <a href="#" class="transition hover:text-white">Privacy</a>
+            <a href="#" class="transition hover:text-white">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <script src="/main.js"></script> -->
+  </body>
+  <script>
+    const slider = document.getElementById("who-can-use-slider");
+    const prevBtn = document.getElementById("who-can-use-prev");
+    const nextBtn = document.getElementById("who-can-use-next");
+
+    function getScrollAmount() {
+      const card = slider.querySelector("article");
+      const gap = 24; // gap-6 = 24px
+      return card.offsetWidth + gap;
+    }
+
+    prevBtn.addEventListener("click", () => {
+      slider.scrollBy({
+        left: -getScrollAmount(),
+        behavior: "smooth",
+      });
+    });
+
+    nextBtn.addEventListener("click", () => {
+      slider.scrollBy({
+        left: getScrollAmount(),
+        behavior: "smooth",
+      });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      const items = document.querySelectorAll(".faq-item");
+
+      items.forEach((item, index) => {
+        const trigger = item.querySelector(".faq-trigger");
+        const content = item.querySelector(".faq-content");
+        const verticalLine = item.querySelector(".faq-icon-vertical");
+
+        // keep first item open by default
+        if (index === 0) {
+          item.classList.add("active");
+        } else {
+          content.classList.add("hidden");
+        }
+
+        trigger.addEventListener("click", function () {
+          const isOpen = item.classList.contains("active");
+
+          // close all
+          items.forEach((otherItem) => {
+            otherItem.classList.remove("active");
+            otherItem.querySelector(".faq-content").classList.add("hidden");
+            const otherVertical = otherItem.querySelector(".faq-icon-vertical");
+            if (otherVertical) otherVertical.style.opacity = "1";
+          });
+
+          // reopen clicked one if it was closed
+          if (!isOpen) {
+            item.classList.add("active");
+            content.classList.remove("hidden");
+            if (verticalLine) verticalLine.style.opacity = "0";
+          }
+        });
+
+        if (index === 0 && verticalLine) {
+          verticalLine.style.opacity = "0";
+        }
+      });
+    });
+  </script>
+</html>
