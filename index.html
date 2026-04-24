@@ -67,6 +67,7 @@
 
           <!-- Mobile Menu Button -->
           <button
+            type="button"
             id="menu-btn"
             class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg border border-[#1a2e3b]/20 bg-white/10 backdrop-blur-md"
             aria-label="Toggle menu"
@@ -315,12 +316,14 @@
         class="mx-auto max-w-[1560px] grid grid-cols-1 lg:grid-cols-[1.08fr_0.92fr] items-center gap-10 xl:gap-20"
       >
         <!-- Left image -->
-        <div class="relative">
-          <div class="overflow-hidden rounded-[16px]">
+        <div class="relative z-10">
+          <div
+            class="mx-auto w-full max-w-[740px] overflow-hidden rounded-[22px] shadow-[0_24px_70px_rgba(15,23,42,0.14)]"
+          >
             <img
-              src="/images/worried.jpeg"
-              alt="Worried woman using a laptop"
-              class="block w-full h-[260px] sm:h-[340px] md:h-[420px] lg:h-[460px] xl:h-[540px] object-cover"
+              src="/images/ced8aeac138e425226a6c857a817b14e9a567c3a.png"
+              alt="Business handshake"
+              class="block h-[260px] w-full object-cover sm:h-[340px] md:h-[420px] lg:h-[420px] xl:h-[400px]"
             />
           </div>
         </div>
@@ -1292,24 +1295,29 @@
 
           <!-- Card 2 -->
           <div
-            class="rounded-[22px] border border-[#d9dbe1] bg-[#f8f8fa] px-8 py-7 text-center shadow-[0_2px_10px_rgba(15,23,42,0.04)]"
+            class="rounded-[22px] border border-[#d9dbe1] bg-[#f8f8fa] px-8 py-6 text-center shadow-[0_2px_10px_rgba(15,23,42,0.04)]"
           >
             <div
               class="mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-[18px] bg-[#0fb46e] shadow-[0_10px_24px_rgba(15,180,110,0.22)]"
             >
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-9 w-9 text-white"
+                width="26"
+                height="32"
+                viewBox="0 0 46 52"
                 fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="1.9"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <path
+                <g
+                  stroke="white"
+                  stroke-width="5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M3 11a2 2 0 012-2h1V7a6 6 0 1112 0v2h1a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7z"
-                />
+                >
+                  <path
+                    d="M13 22V13C13 6.373 18.373 1 25 1C31.627 1 37 6.373 37 13V22"
+                  />
+                  <rect x="1" y="22" width="43" height="29" rx="7" />
+                </g>
               </svg>
             </div>
 
@@ -1546,7 +1554,7 @@
             class="rounded-[16px] border border-[#dde3ec] bg-white px-8 py-7 shadow-[0_4px_18px_rgba(15,23,42,0.04)]"
           >
             <div
-              class="flex h-[64px] w-[64px] items-center justify-center rounded-[16px] bg-[#2f6df6] shadow-[0_10px_22px_rgba(47,109,246,0.25)]"
+              class="flex h-[48px] w-[48px] items-center justify-center rounded-[16px] bg-[#2f6df6] shadow-[0_10px_22px_rgba(47,109,246,0.25)]"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -1554,7 +1562,7 @@
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                stroke-width="2"
+                stroke-width="1"
               >
                 <path
                   stroke-linecap="round"
@@ -1588,21 +1596,27 @@
             class="rounded-[22px] border border-[#dde3ec] bg-white px-8 py-7 shadow-[0_4px_18px_rgba(15,23,42,0.04)]"
           >
             <div
-              class="flex h-[64px] w-[64px] items-center justify-center rounded-[16px] bg-[#2f6df6] shadow-[0_10px_22px_rgba(47,109,246,0.25)]"
+              class="flex h-[48px] w-[48px] items-center justify-center rounded-[16px] bg-[#2f6df6] shadow-[0_10px_22px_rgba(47,109,246,0.25)]"
             >
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-9 w-9 text-white"
+                width="28.66"
+                height="18.66"
+                viewBox="0 0 58 50"
                 fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="1.9"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <path
+                <g
+                  stroke="white"
+                  stroke-width="4"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M8 7V5a4 4 0 118 0v2m-9 0h10a2 2 0 012 2v8a2 2 0 01-2 2H7a2 2 0 01-2-2V9a2 2 0 012-2z"
-                />
+                >
+                  <rect x="2" y="11" width="54" height="37" rx="4" />
+                  <path
+                    d="M19 11V6C19 3.791 20.791 2 23 2H35C37.209 2 39 3.791 39 6V11"
+                  />
+                  <path d="M29 11V48" />
+                </g>
               </svg>
             </div>
 
@@ -1630,20 +1644,28 @@
             class="rounded-[22px] border border-[#dde3ec] bg-white px-8 py-7 shadow-[0_4px_18px_rgba(15,23,42,0.04)]"
           >
             <div
-              class="flex h-[64px] w-[64px] items-center justify-center rounded-[16px] bg-[#2f6df6] shadow-[0_10px_22px_rgba(47,109,246,0.25)]"
+              class="flex h-[48px] w-[48px] items-center justify-center rounded-[16px] bg-[#2f6df6] shadow-[0_10px_22px_rgba(47,109,246,0.25)]"
             >
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-9 w-9 text-white"
+                width="24"
+                height="30"
+                viewBox="0 0 44 30"
                 fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
+                  d="M2 24L17 9L27 19L44 2"
+                  stroke="white"
+                  stroke-width="4"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M7 17L17 7m0 0h-6m6 0v6"
+                />
+                <path
+                  d="M32 2H44V14"
+                  stroke="white"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                 />
               </svg>
             </div>
@@ -2847,7 +2869,7 @@
           <!-- Left content -->
           <div class="max-w-[640px]">
             <h2
-             class="mt-3 text-[39px] leading-[1] font-medium tracking-[0.05em] text-[#0f172a] sm:text-[42px] lg:text-[39px]"
+              class="mt-3 text-[39px] leading-[1] font-medium tracking-[0.05em] text-[#0f172a] sm:text-[42px] lg:text-[39px]"
             >
               Stay Updated With<br />
               Paybuytrust
@@ -3161,30 +3183,45 @@
     <!-- <script src="/main.js"></script> -->
   </body>
   <script>
-    const slider = document.getElementById("who-can-use-slider");
-    const prevBtn = document.getElementById("who-can-use-prev");
-    const nextBtn = document.getElementById("who-can-use-next");
-
-    function getScrollAmount() {
-      const card = slider.querySelector("article");
-      const gap = 24; // gap-6 = 24px
-      return card.offsetWidth + gap;
-    }
-
-    prevBtn.addEventListener("click", () => {
-      slider.scrollBy({
-        left: -getScrollAmount(),
-        behavior: "smooth",
-      });
-    });
-
-    nextBtn.addEventListener("click", () => {
-      slider.scrollBy({
-        left: getScrollAmount(),
-        behavior: "smooth",
-      });
-    });
     document.addEventListener("DOMContentLoaded", function () {
+      // Mobile menu toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      // Slider
+      const slider = document.getElementById("who-can-use-slider");
+      const prevBtn = document.getElementById("who-can-use-prev");
+      const nextBtn = document.getElementById("who-can-use-next");
+
+      if (slider && prevBtn && nextBtn) {
+        function getScrollAmount() {
+          const card = slider.querySelector("article");
+          const gap = 24;
+          return card.offsetWidth + gap;
+        }
+
+        prevBtn.addEventListener("click", () => {
+          slider.scrollBy({
+            left: -getScrollAmount(),
+            behavior: "smooth",
+          });
+        });
+
+        nextBtn.addEventListener("click", () => {
+          slider.scrollBy({
+            left: getScrollAmount(),
+            behavior: "smooth",
+          });
+        });
+      }
+
+      // FAQ accordion
       const items = document.querySelectorAll(".faq-item");
 
       items.forEach((item, index) => {
@@ -3192,9 +3229,12 @@
         const content = item.querySelector(".faq-content");
         const verticalLine = item.querySelector(".faq-icon-vertical");
 
-        // keep first item open by default
+        if (!trigger || !content) return;
+
         if (index === 0) {
           item.classList.add("active");
+          content.classList.remove("hidden");
+          if (verticalLine) verticalLine.style.opacity = "0";
         } else {
           content.classList.add("hidden");
         }
@@ -3202,25 +3242,22 @@
         trigger.addEventListener("click", function () {
           const isOpen = item.classList.contains("active");
 
-          // close all
           items.forEach((otherItem) => {
             otherItem.classList.remove("active");
-            otherItem.querySelector(".faq-content").classList.add("hidden");
+
+            const otherContent = otherItem.querySelector(".faq-content");
             const otherVertical = otherItem.querySelector(".faq-icon-vertical");
+
+            if (otherContent) otherContent.classList.add("hidden");
             if (otherVertical) otherVertical.style.opacity = "1";
           });
 
-          // reopen clicked one if it was closed
           if (!isOpen) {
             item.classList.add("active");
             content.classList.remove("hidden");
             if (verticalLine) verticalLine.style.opacity = "0";
           }
         });
-
-        if (index === 0 && verticalLine) {
-          verticalLine.style.opacity = "0";
-        }
       });
     });
   </script>
